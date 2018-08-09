@@ -253,7 +253,7 @@ public class SearchJobs extends AppCompatActivity implements AdapterView.OnItemS
                     break;
             }
         }
-        //testing spinners' output
+        //testing spinners'output
         Toast.makeText(adapterView.getContext(), "Region: " + region + "\nCategory: " + category + "\nJob Type: " + type , Toast.LENGTH_SHORT).show();
     }
 
