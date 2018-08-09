@@ -1,0 +1,79 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorCream"
+    android:clipChildren="false"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".SearchJobs"
+    tools:layout_editor_absoluteY="25dp"
+    tools:showIn="@layout/activity_search_result">
+
+
+
+
+    <ImageView
+        android:id="@+id/coffeeshop"
+        android:layout_width="match_parent"
+        android:layout_height="241dp"
+        android:background="@drawable/coffee_shop_blur"
+        android:contentDescription="@string/content_desc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/wereOnTheJob"
+        android:layout_width="214dp"
+        android:layout_height="121dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/content_desc"
+        app:layout_constraintBottom_toBottomOf="@+id/coffeeshop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.932"
+        app:srcCompat="@drawable/were_on_the_job" />
+
+    <ImageView
+        android:id="@+id/sjsLogo"
+        android:layout_width="92dp"
+        android:layout_height="68dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/content_desc"
+        app:layout_constraintBottom_toBottomOf="@+id/coffeeshop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/coffeeshop"
+        app:layout_constraintVertical_bias="0.05"
+        app:srcCompat="@drawable/sjs_logo" />
+
+    <ImageView
+        android:id="@+id/redLine"
+        android:layout_width="5dp"
+        android:layout_height="101dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/content_desc"
+        app:layout_constraintBottom_toBottomOf="@+id/coffeeshop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.168"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.87"
+        app:srcCompat="@drawable/red_vertical_line" />
+
+
+</android.support.constraint.ConstraintLayout>
