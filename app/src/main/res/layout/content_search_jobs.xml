@@ -30,7 +30,7 @@
         android:shadowColor="@color/shadowColor"
         android:textSize="14sp"
         android:drawablePadding="5dp"
-        app:layout_constraintBottom_toTopOf="@+id/spinner2"
+        app:layout_constraintBottom_toTopOf="@+id/regionSpinner"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/coffeeshop" />
@@ -54,7 +54,7 @@
         app:layout_constraintVertical_bias="0.871" />
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/jobTypeSpinner"
         android:layout_width="318dp"
         android:layout_height="37dp"
         android:layout_marginBottom="8dp"
@@ -69,7 +69,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Spinner
-        android:id="@+id/spinner3"
+        android:id="@+id/categorySpinner"
         android:layout_width="318dp"
         android:layout_height="37dp"
         android:layout_marginBottom="8dp"
@@ -77,14 +77,14 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/white_textbox_rounded"
-        app:layout_constraintBottom_toTopOf="@+id/spinner"
+        app:layout_constraintBottom_toTopOf="@+id/jobTypeSpinner"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/coffeeshop"
         app:layout_constraintVertical_bias="0.964" />
 
     <Spinner
-        android:id="@+id/spinner2"
+        android:id="@+id/regionSpinner"
         android:layout_width="318dp"
         android:layout_height="37dp"
         android:layout_marginBottom="8dp"
@@ -92,7 +92,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/white_textbox_rounded"
-        app:layout_constraintBottom_toTopOf="@+id/spinner3"
+        app:layout_constraintBottom_toTopOf="@+id/categorySpinner"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/coffeeshop"
@@ -168,11 +168,11 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:contentDescription="@string/content_desc"
-        app:layout_constraintBottom_toBottomOf="@+id/spinner2"
-        app:layout_constraintEnd_toEndOf="@+id/spinner2"
+        app:layout_constraintBottom_toBottomOf="@+id/regionSpinner"
+        app:layout_constraintEnd_toEndOf="@+id/regionSpinner"
         app:layout_constraintHorizontal_bias="0.975"
-        app:layout_constraintStart_toStartOf="@+id/spinner2"
-        app:layout_constraintTop_toTopOf="@+id/spinner2"
+        app:layout_constraintStart_toStartOf="@+id/regionSpinner"
+        app:layout_constraintTop_toTopOf="@+id/regionSpinner"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/downarrow" />
 
@@ -185,11 +185,11 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:contentDescription="@string/content_desc"
-        app:layout_constraintBottom_toBottomOf="@+id/spinner3"
-        app:layout_constraintEnd_toEndOf="@+id/spinner3"
+        app:layout_constraintBottom_toBottomOf="@+id/categorySpinner"
+        app:layout_constraintEnd_toEndOf="@+id/categorySpinner"
         app:layout_constraintHorizontal_bias="0.975"
-        app:layout_constraintStart_toStartOf="@+id/spinner3"
-        app:layout_constraintTop_toTopOf="@+id/spinner3"
+        app:layout_constraintStart_toStartOf="@+id/categorySpinner"
+        app:layout_constraintTop_toTopOf="@+id/categorySpinner"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/downarrow" />
 
@@ -202,11 +202,11 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:contentDescription="@string/content_desc"
-        app:layout_constraintBottom_toBottomOf="@+id/spinner"
-        app:layout_constraintEnd_toEndOf="@+id/spinner"
+        app:layout_constraintBottom_toBottomOf="@+id/jobTypeSpinner"
+        app:layout_constraintEnd_toEndOf="@+id/jobTypeSpinner"
         app:layout_constraintHorizontal_bias="0.975"
-        app:layout_constraintStart_toStartOf="@+id/spinner"
-        app:layout_constraintTop_toTopOf="@+id/spinner"
+        app:layout_constraintStart_toStartOf="@+id/jobTypeSpinner"
+        app:layout_constraintTop_toTopOf="@+id/jobTypeSpinner"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/downarrow" />
 

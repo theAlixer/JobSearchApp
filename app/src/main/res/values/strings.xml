@@ -8,4 +8,28 @@
     <string name="open">open</string>
     <string name="close">close</string>
     <string name="logout_text">Logout</string>
+    <string name="regions">Regions</string>
+    <string name="categories">Categories</string>
+    <string name="jobTitle">Job Title</string>
+    <string name="region">Region</string>
+    <string name="category">Category</string>
+    <string name="jobType">Job Type</string>
+    <string-array name="regions">
+        <item>Region</item>
+        <item>Auckland</item>
+        <item>Wellington</item>
+    </string-array>
+    <string-array name="categories">
+        <item>Category</item>
+        <item>IT</item>
+        <item>Design</item>
+        <item>Account</item>
+    </string-array>
+    <string-array name="jobType">
+        <item>Job Type</item>
+        <item>Casual</item>
+        <item>Full-Time</item>
+        <item>Part-Time</item>
+    </string-array>
+
 </resources>
