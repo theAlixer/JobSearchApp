@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -26,10 +25,10 @@ public class SearchJobAdapter extends RecyclerView.Adapter<SearchJobAdapter.Sear
 
         public SearchViewHolder(View itemView){
             super(itemView);
-            title = (TextView) itemView.findViewById(R.id.txtTitle);
-            region = (TextView) itemView.findViewById(R.id.txtRegion);
-            category = (TextView) itemView.findViewById(R.id.txtCategory);
-            type = (TextView) itemView.findViewById(R.id.txtJobType);
+            title = itemView.findViewById(R.id.txtTitle);
+            region =  itemView.findViewById(R.id.txtRegion);
+            category = itemView.findViewById(R.id.txtCategory);
+            type = itemView.findViewById(R.id.txtJobType);
         }
     }
 
