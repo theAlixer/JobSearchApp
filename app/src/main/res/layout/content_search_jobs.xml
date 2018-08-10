@@ -24,7 +24,7 @@
         android:drawableEnd="@drawable/ic_search_grey_resize"
         android:background="@drawable/white_textbox_rounded"
         android:elevation="10dp"
-        android:hint="Keywords, Job Title or Company"
+        android:hint="Type 'designer', 'accountant' or 'web'"
         android:inputType="text"
         android:paddingHorizontal="10dp"
         android:shadowColor="@color/shadowColor"

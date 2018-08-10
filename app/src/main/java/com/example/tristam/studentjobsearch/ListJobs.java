@@ -33,10 +33,6 @@ public class ListJobs extends AppCompatActivity {
 
     private RecyclerView.Adapter mAdapter;
     private ArrayList<Jobs> jobsList;
-    DrawerLayout drawerLayout2;
-
-    private ActionBarDrawerToggle mToggle;
-    private FirebaseAuth firebaseAuth;
 
 
     @Override
@@ -47,6 +43,7 @@ public class ListJobs extends AppCompatActivity {
         Jobs job1 = new Jobs("Web Developer", "Wellington", "IT", "Full-Time");
         Jobs job2 = new Jobs("Designer", "Auckland", "Art", "One-Off");
         Jobs job3 = new Jobs("Accountant", "Canterbury", "accounting", "Permanent");
+
         jobsList.add(job1);
         jobsList.add(job2);
         jobsList.add(job3);

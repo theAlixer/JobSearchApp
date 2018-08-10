@@ -79,9 +79,9 @@ public class SearchJobs extends AppCompatActivity implements AdapterView.OnItemS
         DatabaseReference jobRef = jobDB.getReference();
 
         //// Search testing with array list
-        list.add("Designer");
-        list.add("Accountant");
-        list.add("Web Developer");
+        list.add("designer");
+        list.add("accountant");
+        list.add("web");
 
 //        // Result - RecyclerView
 //        resultRV.setHasFixedSize(true);
@@ -216,7 +216,7 @@ public class SearchJobs extends AppCompatActivity implements AdapterView.OnItemS
             setContentView(R.layout.activity_search_result);
             Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
             setSupportActionBar(toolbar);
-            Toast.makeText(SearchJobs.this, search + "found.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(SearchJobs.this, search + " found.", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(SearchJobs.this, ListJobs.class)); //starts the ListJobs Activity
         } else {
             Toast.makeText(SearchJobs.this,  "No matching result for " + search, Toast.LENGTH_SHORT).show();
