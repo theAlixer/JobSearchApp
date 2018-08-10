@@ -57,10 +57,10 @@ public class ListJobAdapter extends RecyclerView.Adapter<ListJobAdapter.ViewHold
     }
 
 
-    public void setJobTitle(String jobTitle){
-        TextView jobTitleText = mView.findViewById(R.id.textView_job_title);
-        jobTitleText.setText(jobTitle);
-    }
+//    public void setJobTitle(String jobTitle){
+//        TextView jobTitleText = mView.findViewById(R.id.textView_job_title);
+//        jobTitleText.setText(jobTitle);
+//    }
 //    public void setCategory(String jobCategory){
 //        TextView category = mView.findViewById(R.id.textView_category);
 //        category.setText(jobCategory);
