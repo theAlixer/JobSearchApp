@@ -147,6 +147,7 @@ public class SearchJobs extends AppCompatActivity implements AdapterView.OnItemS
             @Override
             public void onClick(View v){
                 startSearch();
+
             }
         });
     }
@@ -216,6 +217,7 @@ public class SearchJobs extends AppCompatActivity implements AdapterView.OnItemS
             Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
             setSupportActionBar(toolbar);
             Toast.makeText(SearchJobs.this, search + "found.", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(SearchJobs.this, ListJobs.class)); //starts the ListJobs Activity
         } else {
             Toast.makeText(SearchJobs.this,  "No matching result for " + search, Toast.LENGTH_SHORT).show();
         }
