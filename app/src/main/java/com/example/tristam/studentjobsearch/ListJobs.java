@@ -47,7 +47,7 @@ public class ListJobs extends AppCompatActivity {
         recyclerView = findViewById(R.id.myRecycleView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        mAdapter = new ListJobAdapter();
+        mAdapter = new ListJobAdapter(jobsList);
         recyclerView.setAdapter(mAdapter);
     }
 

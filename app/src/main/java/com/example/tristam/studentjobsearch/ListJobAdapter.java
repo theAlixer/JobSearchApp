@@ -27,7 +27,10 @@ public class ListJobAdapter extends RecyclerView.Adapter<ListJobAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(@NonNull ListJobAdapter.ViewHolder holder, int position) {
-        holder.jobTitleTextView.setText("asfasdf");
+        holder.jobTitleTextView.setText(jobsList.get(position).getTitle());
+        holder.jobRegionTextView.setText(jobsList.get(position).getRegion());
+        holder.jobCategoryTextView.setText(jobsList.get(position).getCategory());
+        holder.jobTypeTextView.setText(jobsList.get(position).getType());
     }
 
 
