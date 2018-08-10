@@ -62,59 +62,20 @@ public class SearchJobs extends AppCompatActivity implements AdapterView.OnItemS
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_jobs);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         // Search component
         searchValue = findViewById(R.id.editText);
         searchButton = findViewById(R.id.searchButton);
 
-        // Testing - try to display the result
-//        resultRV = findViewById(R.id.result_recyclerView);
-
-        // jobDB
-//        FirebaseDatabase jobDB = FirebaseDatabase.getInstance();
-//        DatabaseReference jobRef = jobDB.getReference();
-
-
-        //listArray
-        list.add("potato");
-        list.add("tomato");
-        list.add("potatomato");
-
-        // Result - RecyclerView
-//        resultRV.setHasFixedSize(true);
-//        resultRV.setLayoutManager(new LinearLayoutManager(this));
-//        resultRV.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
-
-        // Testing - try to display the result
-//        searchValue.addTextChangedListener(new TextWatcher() {
-//            @Override
-//            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-//
-//            }
-//
-//            @Override
-//            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-//
-//            }
-//
-//            @Override
-//            public void afterTextChanged(Editable text) {
-//                if (!text.toString().isEmpty()){
-//                    setAdapter(text.toString());
-//                } else {
-//                    jobArrayList.clear();
-//                }
-//
-//            }
-//        });
 
         // Spinners
         Spinner regionSpinner = findViewById(R.id.regionSpinner);
         Spinner categorySpinner = findViewById(R.id.categorySpinner);
         Spinner jobTypeSpinner = findViewById(R.id.jobTypeSpinner);
 
+        //spinner items below are found in strings.xml as array items
         ArrayAdapter<CharSequence> regionAdapter = ArrayAdapter.createFromResource(this,R.array.regions, android.R.layout.simple_spinner_item);
         ArrayAdapter<CharSequence> categoryAdapter = ArrayAdapter.createFromResource(this,R.array.categories, android.R.layout.simple_spinner_item);
         ArrayAdapter<CharSequence> jobTypeAdapter = ArrayAdapter.createFromResource(this,R.array.jobType, android.R.layout.simple_spinner_item);
@@ -212,7 +173,7 @@ public class SearchJobs extends AppCompatActivity implements AdapterView.OnItemS
             Toast.makeText(SearchJobs.this, "Please enter keyword to search", Toast.LENGTH_SHORT).show();
         } else if (list.contains(search.toLowerCase())) {         //result found
             setContentView(R.layout.activity_search_result);
-            Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+            Toolbar toolbar = findViewById(R.id.toolbar);
             setSupportActionBar(toolbar);
             Toast.makeText(SearchJobs.this, search + "found.", Toast.LENGTH_SHORT).show();
         } else {

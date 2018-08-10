@@ -36,6 +36,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.tristam.studentjobsearch.Login" />
         </activity>
+        <activity android:name=".ListJobs"></activity>
     </application>
 
 </manifest>

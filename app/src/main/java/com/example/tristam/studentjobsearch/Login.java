@@ -26,7 +26,6 @@ public class Login extends AppCompatActivity {
     private Button signInButton;
     private Button registerButton;
 
-    private static String thingmajig;
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
 
