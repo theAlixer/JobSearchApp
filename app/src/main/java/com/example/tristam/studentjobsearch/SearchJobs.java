@@ -72,7 +72,7 @@ public class SearchJobs extends AppCompatActivity implements AdapterView.OnItemS
         searchButton = findViewById(R.id.searchButton);
 
         // Testing - try to display the result
-        resultRV = findViewById(R.id.result_recyclerView);
+        resultRV = findViewById(R.id.myRecycleView);
 
         // jobDB
         FirebaseDatabase jobDB = FirebaseDatabase.getInstance();
@@ -83,33 +83,33 @@ public class SearchJobs extends AppCompatActivity implements AdapterView.OnItemS
         list.add("tomato");
         list.add("potatomato");
 
-        // Result - RecyclerView
-        resultRV.setHasFixedSize(true);
-        resultRV.setLayoutManager(new LinearLayoutManager(this));
-        resultRV.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
-
-        // Testing - try to display the result
-        searchValue.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable text) {
-                if (!text.toString().isEmpty()){
-                    setAdapter(text.toString());
-                } else {
-                    jobArrayList.clear();
-                }
-
-            }
-        });
+//        // Result - RecyclerView
+//        resultRV.setHasFixedSize(true);
+//        resultRV.setLayoutManager(new LinearLayoutManager(this));
+//        resultRV.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
+//
+//        // Testing - try to display the result
+//        searchValue.addTextChangedListener(new TextWatcher() {
+//            @Override
+//            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+//
+//            }
+//
+//            @Override
+//            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+//
+//            }
+//
+//            @Override
+//            public void afterTextChanged(Editable text) {
+//                if (!text.toString().isEmpty()){
+//                    setAdapter(text.toString());
+//                } else {
+//                    jobArrayList.clear();
+//                }
+//
+//            }
+//        });
 
         // Spinners
         Spinner regionSpinner = findViewById(R.id.regionSpinner);
@@ -152,40 +152,40 @@ public class SearchJobs extends AppCompatActivity implements AdapterView.OnItemS
         });
     }
 
-    // Testing - try to display the result
-    private void setAdapter (final String searching){
-        FirebaseDatabase jobDB = FirebaseDatabase.getInstance("jobs");
-        jobDB.getReference().addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                int counter = 0;
-                jobArrayList.clear();
-
-                for (DataSnapshot snapshot: dataSnapshot.getChildren()){
-                    //String ID = snapshot.getKey();
-                    String title = snapshot.child("title").getValue(String.class);
-                    String region = snapshot.child("region").getValue(String.class);
-                    String category = snapshot.child("category").getValue(String.class);
-                    String type = snapshot.child("type").getValue(String.class);
-
-                    if (title.toLowerCase().contains(searching.toLowerCase())){
-                        Jobs jobs = new Jobs(title,region,category,type);
-                        jobArrayList.add(jobs);
-                        counter++;
-                    } else if (title.contains(null)) {
-                        System.out.println(counter + " matching result found.");
-                        break;
-                    }
-                }
-                searchJobAdapter = new SearchJobAdapter(SearchJobs.this,jobArrayList);
-                resultRV.setAdapter(searchJobAdapter);
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-            }
-        });
-    }
+//     //Testing - try to display the result
+//    private void setAdapter (final String searching){
+//        FirebaseDatabase jobDB = FirebaseDatabase.getInstance("jobs");
+//        jobDB.getReference().addListenerForSingleValueEvent(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                int counter = 0;
+//                jobArrayList.clear();
+//
+//                for (DataSnapshot snapshot: dataSnapshot.getChildren()){
+//                    //String ID = snapshot.getKey();
+//                    String title = snapshot.child("title").getValue(String.class);
+//                    String region = snapshot.child("region").getValue(String.class);
+//                    String category = snapshot.child("category").getValue(String.class);
+//                    String type = snapshot.child("type").getValue(String.class);
+//
+//                    if (title.toLowerCase().contains(searching.toLowerCase())){
+//                        Jobs jobs = new Jobs(title,region,category,type);
+//                        jobArrayList.add(jobs);
+//                        counter++;
+//                    } else if (title.contains(null)) {
+//                        System.out.println(counter + " matching result found.");
+//                        break;
+//                    }
+//                }
+//                searchJobAdapter = new SearchJobAdapter(SearchJobs.this,jobArrayList);
+//                resultRV.setAdapter(searchJobAdapter);
+//            }
+//
+//            @Override
+//            public void onCancelled(DatabaseError databaseError) {
+//            }
+//        });
+//    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
