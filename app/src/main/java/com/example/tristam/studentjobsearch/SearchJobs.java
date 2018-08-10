@@ -79,9 +79,9 @@ public class SearchJobs extends AppCompatActivity implements AdapterView.OnItemS
         DatabaseReference jobRef = jobDB.getReference();
 
         //// Search testing with array list
-        list.add("potato");
-        list.add("tomato");
-        list.add("potatomato");
+        list.add("Designer");
+        list.add("Accountant");
+        list.add("Web Developer");
 
 //        // Result - RecyclerView
 //        resultRV.setHasFixedSize(true);
