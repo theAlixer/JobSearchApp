@@ -75,5 +75,18 @@
         app:layout_constraintVertical_bias="0.87"
         app:srcCompat="@drawable/red_vertical_line" />
 
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/result_recyclerView"
+        android:layout_width="368dp"
+        android:layout_height="310dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/coffeeshop" />
+
 
 </android.support.constraint.ConstraintLayout>
